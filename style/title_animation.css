@@ -1,0 +1,55 @@
+.Name-part {
+    display: inline-block;
+}
+
+.Name.is-expanded .PROJECT {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Name.is-expanded .PROJECT {
+    max-width: none;
+    transition: transform 500ms 125ms ease, opacity 200ms 0ms;
+}
+
+.Name.is-expanded .K {
+    opacity: 1;
+    animation: Enter 1500ms ease-in-out;
+}
+
+.PROJECT {
+    opacity: 0;
+}
+
+.K {
+    opacity: 0;
+    z-index: 1;
+
+    animation-fill-mode: forwards;
+}
+
+
+
+.PROJECT {
+    transform: translateX(-10%);
+    transition: transform 300ms 100ms ease, opacity 200ms;
+}
+
+@keyframes Enter {
+    0% {
+        opacity: 0;
+        color: white;
+        transform: rotate(50deg);
+    }
+
+    50% {
+        opacity: 0;
+        color: white;
+        transform: rotate(50deg);
+    }
+
+    100% {
+        color: #f21619;
+        transform: rotate(0deg);
+    }
+}
