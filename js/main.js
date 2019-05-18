@@ -5,11 +5,11 @@ function delayedAlert() {
 function expandLogo() {
     $('.Name').addClass('is-expanded');
     var timeoutID = window.setTimeout(fadeInBanner, 2000);
-    window.setTimeout($('body').addClass('fadeInHalf'), 2000);
 }
 
 function fadeInBanner() {
     $('.main-banner').addClass('fadeIn');
+    $('body').addClass('fadeInHalf')
 }
 
 $(document).ready(function() {
