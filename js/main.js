@@ -1,4 +1,3 @@
-
 function delayedAlert() {
     var timeoutID = window.setTimeout(expandLogo, 800);
     $('body').addClass('fadeInHalf');
@@ -11,4 +10,7 @@ function expandLogo() {
 function fadeInBanner() {
     $('.main-banner').addClass('fadeIn');
 }
-delayedAlert();
+
+$(document).ready(function() {
+    delayedAlert();
+});
