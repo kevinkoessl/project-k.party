@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+.crete-round {
+    font-family: 'Crete Round', serif;
+}
+
 body {
     margin: 0;
     background: #000000;
@@ -10,7 +14,7 @@ body {
     position: relative;
 }
 
-body::after{
+body::after {
     content: "";
     top: 0;
     left: 0;
@@ -18,13 +22,12 @@ body::after{
     right: 0;
     position: absolute;
     opacity: 0;
-    background-image:  linear-gradient(#770000, black), url(../src/texture_background.jpg);
-    background-blend-mode: darken;
+    background-image: linear-gradient(#770000, black), url(../src/texture_background.jpg);
+    background-blend-mode: overlay;
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    height: -webkit-fill-available;
     z-index: -1000;
 }
 
@@ -37,9 +40,23 @@ h1 {
     font-size: 9rem;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    text-shadow: 5px 5px 15px rgba(0,0,0,0.5)
+
 }
 
+.date, .location {
+    opacity: 0;
+}
+
+.date.fadeIn2, .location.fadeIn2 {
+    opacity: 1;
+}
+.text-shadow {
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5)
+}
+
+h2 {
+    font-size: 5rem;
+}
 .text-red {
     color: #f21619;
 }
@@ -50,6 +67,11 @@ h1 {
 
 .jumbotron {
     background: none;
+    user-select: none;
+}
+
+.jumbotron h2 {
+    font-size: 3rem;
 }
 
 .main-banner {
@@ -57,7 +79,8 @@ h1 {
     position: relative;
     padding: 100px 25px;
 }
-.main-banner::after{
+
+.main-banner::after {
     content: "";
     top: 0;
     left: 0;
@@ -73,6 +96,74 @@ h1 {
 
 .main-banner.fadeIn::after {
     opacity: 1;
+}
+
+.countdown {
+    text-align: center;
+    padding: 2rem;
+}
+
+.countdown h2 {
+    font-size: 3rem;
+}
+
+.content-wrapper {
+    opacity: 0;
+}
+
+.content-wrapper.fadeInUp {
+    opacity: 1;
+}
+
+section {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.content {
+    overflow: hidden;
+    position: relative;
+}
+
+.dj-tile .image-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.dj-tile .overlay-bottom {
+    padding: 1rem 1rem 1rem 1rem;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(119, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.dj-tile .overlay-top {
+    padding: 1rem 1rem 1rem 1rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+[class*='col'] .content {
+    height: 400px;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.features .content {
+    background: #f21619;
+    padding: 1rem;
+}
+
+.dj-photo {
+    width: 100%;
 }
 
 @media screen and (min-width: 1200px) {
