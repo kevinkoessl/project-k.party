@@ -5,6 +5,8 @@
     <title>Project K</title>
 
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -19,10 +21,161 @@
 </head>
 <body>
 <div class="jumbotron jumbotron-fluid main-banner">
-    <div class="container">
-        <h1 class="text-uppercase text-white Name"><span class="Name-part PROJECT">Project</span> <span class="text-red Name-part K">K</span></h1>
+    <div class="container text-shadow">
+        <h1 class="text-uppercase text-white Name"><span class="Name-part PROJECT">Project</span> <span
+                class="text-red Name-part K">K</span></h1>
+        <h2 class="text-uppercase text-white crete-round date">Friday 07 June 2019</h2>
+        <h3 class="text-uppercase text-white crete-round location">Oberhausen, Germany</h3>
     </div>
 </div>
+<div class="content-wrapper">
+    <div class="countdown">
+        <h2 class="text-white text-uppercase justify-content-center">
+            <span id="days">XX</span> Days <span id="hours">XX</span> Hours <span id="minutes">XX</span> Minutes <span
+                id="seconds">XX</span> Seconds
+        </h2>
+    </div>
+    <section class="lineup">
+        <div class="container-fluid">
+            <h2 class="text-white text-uppercase text-left crete-round">Line Up</h2>
+            <div class="row">
+                <div class="col-md-6 dj-tile">
+                    <div class="content">
+                        <div class="image-container">
+                            <img src="src/nankee.jpg" alt="Nankee" class="dj-photo"/>
+                        </div>
+                        <div class="overlay-top">
+                            <h3 class="text-white text-uppercase">Mainstage</h3>
+                        </div>
+                        <div class="overlay-bottom">
+                            <h3 class="text-white">Nankee</h3>
+                            <h4 class="text-white">Headliner</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 dj-tile">
+                    <div class="content">
+                        <div class="image-container">
+                            <img src="src/basscuit.jpg" alt="Basscuit" class="dj-photo"/>
+                        </div>
+                        <div class="overlay-top">
+                            <h3 class="text-white text-uppercase">Mainstage</h3>
+                        </div>
+                        <div class="overlay-bottom">
+                            <h3 class="text-white">Basscuit</h3>
+                            <h4 class="text-white">Headliner</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container-fluid">
+            <h2 class="text-white text-uppercase text-left">Infos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="content">
+                        <h3>Spotify Stage</h3>
+                        <h2>Sei selbst der DJ</h2>
+                        <p>Auf der Spotify Stage gibst du den Ton an!
+                            Pack deine Musik jetzt schon in die Spotify Playlist Project K und geh so richtig ab!
+                            Damit es fair bleibt darf jeder maximal 10 Tracks hinzufügen. Selbstverständlich darfst du
+                            auch
+                            Musik für deine Freunde hinzufügen.</p>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content">
+                        <h3>Shot Lottery</h3>
+                        <h4>22 ist eine </h4>
+                        <p>Zieh dein Los zum Glück bei der ShotLottery.
+                            Jeder Teilnehmer darf die Anzahl auf seinem Los als Shots an die anderen Teilnehmer
+                            verteilen.
+                            Als Hauptgewinn winken dir 22 Shots die du verteilen darfst. Mit der Teilnahme verpflichtest
+                            du
+                            dich dazu, jeden Shot zu trinken der dir zu geteilt wird. Maximal ein Ticket pro Person.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="content">
+                        <h3>Location</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2 class="text-white text-uppercase">F.A.Q.</h2>
+        <div class="question container-fluid">
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#location">Wie finde ich
+                die
+                Location?
+            </button>
+            <div id="location" class="collapse">
+                Die Adresse lautet
+                Schwarzwaldstr. 40
+                46119 Oberhausen
+
+                Mit dem Auto könnt ihr dort am Straßenrand Parken.
+
+                Ihr könnt die Location außerdem zu Fuß von den Bushaltestellen Harkortstraße und Tackenbergstraße
+                erreichen.
+                Bitte informiert euch rechtzeitig über eine passende Verbindung und darüber, wann der letzte Bus fährt.
+
+            </div>
+        </div>
+        <div class="question container-fluid">
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#bringFriends">Kann ich
+                einen
+                Freund oder eine Freundin mitbringen?
+            </button>
+            <div id="bringFriends" class="collapse">
+                Aufgrund der hohen Besucherzahl erhalten derzeit nur eingeladene Gäste den Zutritt zum Gelände. Wenn Ihr
+                Euren Partner oder Freunde mitbringen wollt, setzt euch bitte kurz mit dem Veranstalter auseinander:
+                <a href="" class="btn btn-primary">Kontaktieren</a>
+            </div>
+        </div>
+        <div class="question container-fluid">
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#startTime">Wann beginnt
+                das
+                Event?
+            </button>
+            <div id="startTime" class="collapse">
+                Einlass ist ab 18:00 Uhr.
+            </div>
+        </div>
+        <div class="question container-fluid">
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#bringSomething">Soll ich
+                etwas mitbringen?
+            </button>
+            <div id="bringSomething" class="collapse">
+                Grundsätzlich musst du nichts mitbringen. Dennoch können wir nicht gewährleisten, dass alle deine
+                Wünsche
+                erfüllt werden.
+                Wenn du und deine Freunde zum Beispiel etwas spezielles trinken möchten, solltet Ihr das am besten
+                selber
+                mitbringen.
+            </div>
+        </div>
+        <div class="question container-fluid">
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#food">Gibt es etwas zu
+                Essen?
+            </button>
+            <div id="food" class="collapse">
+                Ja es wird etwas zu Essen geben. Was es genau es gibt, steht zu diesem Zeitpunkt noch nicht fest. Wenn
+                du
+                etwas
+                vegetarisches oder veganes essen möchtest gib bitte rechtzeitig Bescheid.
+            </div>
+        </div>
+    </section>
+</div>
 <script src="js/main.js"></script>
+<script src="js/counter.js"></script>
 </body>
 </html>

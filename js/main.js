@@ -9,6 +9,9 @@ function expandLogo() {
 
 function fadeInBanner() {
     $('.main-banner').addClass('fadeIn');
+    $('.content-wrapper').addClass('fadeInUp');
+    $('.date').addClass('fadeIn2');
+    $('.location').addClass('fadeIn2');
     $('body').addClass('fadeInHalf')
 }
 
