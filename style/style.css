@@ -42,6 +42,9 @@ h1 {
 
 }
 
+p {
+    font-size: 1.5rem;
+}
 .date, .location {
     opacity: 0;
 }
@@ -146,10 +149,14 @@ section {
 }
 
 .dj-tile .image-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     overflow: hidden;
+ }
+
+.dj-tile .content.basscuit .image-container {
+    align-items: flex-start;
 }
 
 .dj-tile .overlay-bottom {
@@ -186,11 +193,13 @@ section {
 }
 
 .info-tile .content {
+    min-height: 500px;
     height: 100%;
     padding: 1.5rem;
 }
 
 .info-tile.spotify .content {
+
     background: url("../src/club_background.jpg");
     background-repeat: repeat;
     background-size: cover;
@@ -198,7 +207,6 @@ section {
 }
 
 .info-tile.location .content {
-    min-height: 300px;
     padding: 0;
 }
 

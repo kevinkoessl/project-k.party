@@ -47,6 +47,16 @@
     transition: transform 200ms ease-in-out;
 }
 
+.faq--title {
+    color: white;
+    transition: color 150ms ease-in-out;
+}
+
+.faq--title:hover {
+    color: #01d17a;
+    transition: color 200ms ease-in-out;
+}
+
 .hover-scale {
     display: inline-block;
     transform: scale(1);
