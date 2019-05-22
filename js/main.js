@@ -2,6 +2,7 @@ function delayedAlert() {
     var timeoutID = window.setTimeout(expandLogo, 800);
 
 }
+
 function expandLogo() {
     $('.Name').addClass('is-expanded');
     var timeoutID = window.setTimeout(fadeInBanner, 2000);
@@ -9,12 +10,13 @@ function expandLogo() {
 
 function fadeInBanner() {
     $('.main-banner').addClass('fadeIn');
-    $('.content-wrapper').addClass('fadeInUp');
+    $('[class*="tile"]').addClass('fadeInUp');
     $('.date').addClass('fadeIn2');
     $('.location').addClass('fadeIn2');
     $('body').addClass('fadeInHalf')
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     delayedAlert();
+    $('.faq--title').addClass('collapsed');
 });

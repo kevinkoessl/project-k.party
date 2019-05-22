@@ -95,8 +95,8 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        -webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0);
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
     }
 
     to {
@@ -110,5 +110,5 @@
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
     animation-timing-function: ease-in-out;
-    animation-duration: 2000ms;
+    animation-duration: 1000ms;
 }

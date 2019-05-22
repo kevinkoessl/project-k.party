@@ -1,0 +1,62 @@
+.u-shadow {
+    text-shadow: 2px 2px 0 #01d17a;
+    transition: text-shadow 150ms ease-in-out;
+}
+
+.dj-tile:hover .u-shadow {
+    text-shadow: -2px -2px 0 #f21619;
+}
+
+.dj-tile .dj-photo {
+    transform: scale(1);
+    transition: all 2000ms cubic-bezier(0, 0, 0.13, 0.63);
+}
+
+.dj-tile:hover .dj-photo {
+    transform: scale(1.5);
+    transition: all 2000ms cubic-bezier(0, 0, 0.13, 0.63);
+}
+
+.info-tile:hover .u-shadow {
+    text-shadow: -2px -2px 0 #f21619;
+}
+
+.jump-right {
+    display: inline-block;
+    color: #ffffff;
+    transform: translateX(0px);
+    transition: all 100ms ease-in-out;
+}
+
+.jump-right:hover {
+    transform: translateX(10px);
+    color: #01d17a;
+    transition: all 150ms ease-in-out;
+    text-decoration: none;
+}
+
+.faq--title.collapsed .fas {
+    display: inline-block;
+    transform: rotate(-90deg);
+    transition: transform 150ms ease-in-out;
+}
+
+.faq--title .fas {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 200ms ease-in-out;
+}
+
+.hover-scale {
+    display: inline-block;
+    transform: scale(1);
+    color: white;
+    transition: transform 100ms ease-in-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    color: #01d17a;
+    transition: all 150ms ease-in-out;
+    text-decoration: none;
+}
