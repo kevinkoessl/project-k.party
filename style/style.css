@@ -36,7 +36,7 @@ body.fadeInHalf::after {
 
 
 h1 {
-    font-size: 9rem;
+    font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
 
@@ -54,7 +54,7 @@ p {
 }
 
 h2 {
-    font-size: 5rem;
+
 }
 
 strong {
@@ -94,7 +94,6 @@ i.fas {
 }
 
 .jumbotron h2 {
-    font-size: 3rem;
 }
 
 .main-banner {
@@ -112,7 +111,7 @@ i.fas {
     position: absolute;
     opacity: 0;
     background-image: url(../src/project_k_banner.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     z-index: -1;
 }
@@ -127,7 +126,7 @@ i.fas {
 }
 
 .countdown h2 {
-    font-size: 3rem;
+
 }
 
 [class*='tile'] {
