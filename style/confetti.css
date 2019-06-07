@@ -1,0 +1,693 @@
+/*
+ *
+ * My attempt at confetti, not sure of any other way to make it more random (on load etc)
+ *
+ */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+.conf-cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.confetti {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #f00;
+    opacity: 0;
+    animation-name: fallsway;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+.confetti:nth-child(1) {
+    z-index: 1;
+    animation-name: fallsway1;
+    animation-delay: 0.2s;
+    background-color: #77a59a;
+}
+.confetti:nth-child(2) {
+    z-index: 2;
+    animation-name: fallsway2;
+    animation-delay: 0.4s;
+    background-color: #2358da;
+}
+.confetti:nth-child(3) {
+    z-index: 3;
+    animation-name: fallsway3;
+    animation-delay: 0.6s;
+    background-color: #788879;
+}
+.confetti:nth-child(4) {
+    z-index: 4;
+    animation-name: fallsway4;
+    animation-delay: 0.8s;
+    background-color: #e9e83e;
+}
+.confetti:nth-child(5) {
+    z-index: 5;
+    animation-name: fallsway5;
+    animation-delay: 1s;
+    background-color: #738be1;
+}
+.confetti:nth-child(6) {
+    z-index: 6;
+    animation-name: fallsway6;
+    animation-delay: 1.2s;
+    background-color: #b19a7d;
+}
+.confetti:nth-child(7) {
+    z-index: 7;
+    animation-name: fallsway7;
+    animation-delay: 1.4s;
+    background-color: #ede54e;
+}
+.confetti:nth-child(8) {
+    z-index: 8;
+    animation-name: fallsway8;
+    animation-delay: 1.6s;
+    background-color: #109a21;
+}
+.confetti:nth-child(9) {
+    z-index: 9;
+    animation-name: fallsway9;
+    animation-delay: 1.8s;
+    background-color: #5cab9c;
+}
+.confetti:nth-child(10) {
+    z-index: 10;
+    animation-name: fallsway10;
+    animation-delay: 2s;
+    background-color: #77d245;
+}
+.confetti:nth-child(11) {
+    z-index: 11;
+    animation-name: fallsway11;
+    animation-delay: 2.2s;
+    background-color: #15d380;
+}
+.confetti:nth-child(12) {
+    z-index: 12;
+    animation-name: fallsway12;
+    animation-delay: 2.4s;
+    background-color: #aebc3f;
+}
+.confetti:nth-child(13) {
+    z-index: 13;
+    animation-name: fallsway13;
+    animation-delay: 2.6s;
+    background-color: #ec0180;
+}
+.confetti:nth-child(14) {
+    z-index: 14;
+    animation-name: fallsway14;
+    animation-delay: 2.8s;
+    background-color: #636ed3;
+}
+.confetti:nth-child(15) {
+    z-index: 15;
+    animation-name: fallsway15;
+    animation-delay: 3s;
+    background-color: #fd505e;
+}
+.confetti:nth-child(16) {
+    z-index: 16;
+    animation-name: fallsway16;
+    animation-delay: 3.2s;
+    background-color: #d37efb;
+}
+.confetti:nth-child(17) {
+    z-index: 17;
+    animation-name: fallsway17;
+    animation-delay: 3.4s;
+    background-color: #c440f2;
+}
+.confetti:nth-child(18) {
+    z-index: 18;
+    animation-name: fallsway18;
+    animation-delay: 3.6s;
+    background-color: #f1ead9;
+}
+.confetti:nth-child(19) {
+    z-index: 19;
+    animation-name: fallsway19;
+    animation-delay: 3.8s;
+    background-color: #c31d51;
+}
+.confetti:nth-child(20) {
+    z-index: 20;
+    animation-name: fallsway20;
+    animation-delay: 4s;
+    background-color: #7abc82;
+}
+@keyframes fallsway1 {
+    0% {
+        top: -5%;
+        left: 14%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 7%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 58%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 55%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 26%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway2 {
+    0% {
+        top: -5%;
+        left: 22%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 66%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 90%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 58%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 17%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway3 {
+    0% {
+        top: -5%;
+        left: 12%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 87%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 89%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 20%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 9%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway4 {
+    0% {
+        top: -5%;
+        left: 77%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 79%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 5%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 48%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 86%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway5 {
+    0% {
+        top: -5%;
+        left: 65%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 38%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 76%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 67%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 27%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway6 {
+    0% {
+        top: -5%;
+        left: 33%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 73%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 70%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 25%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 69%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway7 {
+    0% {
+        top: -5%;
+        left: 58%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 69%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 57%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 70%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 23%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway8 {
+    0% {
+        top: -5%;
+        left: 72%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 1%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 82%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 56%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 8%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway9 {
+    0% {
+        top: -5%;
+        left: 8%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: -3%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 24%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 29%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 44%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway10 {
+    0% {
+        top: -5%;
+        left: 49%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 14%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 8%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 55%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 42%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway11 {
+    0% {
+        top: -5%;
+        left: 87%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 3%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 17%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 76%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 14%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway12 {
+    0% {
+        top: -5%;
+        left: 53%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 44%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 83%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: -3%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 22%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway13 {
+    0% {
+        top: -5%;
+        left: 19%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 25%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 82%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 58%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 1%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway14 {
+    0% {
+        top: -5%;
+        left: 41%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 43%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 67%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 44%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 68%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway15 {
+    0% {
+        top: -5%;
+        left: 73%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 9%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 69%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 23%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 45%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway16 {
+    0% {
+        top: -5%;
+        left: 42%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 92%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 25%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 55%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 44%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway17 {
+    0% {
+        top: -5%;
+        left: 35%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 80%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 84%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 75%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 46%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway18 {
+    0% {
+        top: -5%;
+        left: 33%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 21%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 30%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 93%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 6%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway19 {
+    0% {
+        top: -5%;
+        left: 19%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 46%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 70%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 40%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 86%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway20 {
+    0% {
+        top: -5%;
+        left: 35%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+    25% {
+        left: 69%;
+        transform: skew(30deg);
+    }
+    50% {
+        left: 79%;
+        transform: skew(-30deg);
+    }
+    75% {
+        left: 89%;
+        transform: skew(30deg);
+    }
+    100% {
+        top: 100%;
+        left: 23%;
+        opacity: 1;
+        transform: skew(-30deg);
+    }
+}
+@keyframes fallsway {
+    0% {
+        top: -10%;
+        left: 33%;
+        opacity: 1;
+    }
+    25% {
+        left: 93%;
+    }
+    50% {
+        left: 80%;
+    }
+    75% {
+        left: 41%;
+    }
+    100% {
+        top: 110%;
+        left: 76%;
+        opacity: 1;
+    }
+}
