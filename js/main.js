@@ -1,22 +1,145 @@
-function delayedAlert() {
-    var timeoutID = window.setTimeout(expandLogo, 800);
+Vue.component('player-select', {
+    data: function () {
+        return {
+            names: []
+        }
+    },
+    template: '<!--<template><div class="container-fluid"><form><div class="form-group"><input type="text" class="form-control" v-model="names[0]"></div></form></div></template>-->'
+});
 
-}
+Vue.component('text-color-game', {
+    data: function () {
+        return {
+            colours: [
+                {
+                    name: 'Blau',
+                    colour: '#007ebc'
+                },
+                {
+                    name: 'Rot',
+                    colour: '#b52732'
+                },
+                {
+                    name: 'Gelb',
+                    colour: '#cdc519'
+                },
+                {
+                    name: 'Grün',
+                    colour: '#00d159'
+                },
+                {
+                    name: 'Lila',
+                    colour: '#9600d7'
+                },
+                {
+                    name: 'Schwarz',
+                    colour: '#190d0b'
+                },
+                {
+                    name: 'Weiß',
+                    colour: '#dfd9f2'
+                },
+                {
+                    name: 'Orange',
+                    colour: '#c47200'
+                }],
+            colourName: '',
+            currentColor: 1,
+            currentStyle: {},
+            gameMessage: "Drück den Knopf, wenn der Text Blau ist!",
+            hitCounter: 0,
+            clicked: false
+        }
+    }, computed: {},
+    methods: {
+        rotateColours() {
+            let vm = this;
+            setInterval(function () {
+                let index;
+                for (let i = 0; i < 3; i++) {
+                    index = Math.floor(Math.random() * vm.colours.length);
+                    if (index !== 0) {
+                        break;
+                    }
+                }
+                if (vm.colourName === vm.colours[index].name) {
+                    vm.colourName = vm.colours[(index + 1) % vm.colours.length].name;
+                } else {
+                    vm.colourName = vm.colours[index].name;
+                }
 
-function expandLogo() {
-    $('.Name').addClass('is-expanded');
-    var timeoutID = window.setTimeout(fadeInBanner, 2000);
-}
+                let index1 = Math.floor(Math.random() * vm.colours.length);
+                let index2 = index1;
+                do {
+                    index1 = Math.floor(Math.random() * vm.colours.length);
+                } while (index2 === index1)
+                setTimeout(function () {
+                    vm.currentColor = index2;
+                    vm.clicked = false;
+                }, 70);
 
-function fadeInBanner() {
-    $('.main-banner').addClass('fadeIn');
-    $('[class*="tile"]').addClass('fadeInUp');
-    $('.date').addClass('fadeIn2');
-    $('.location').addClass('fadeIn2');
-    $('body').addClass('fadeInHalf')
-}
+                vm.currentStyle = {
+                    backgroundColor: vm.colours[index1].colour,
+                    shadowColor: vm.colours[index2].colour,
+                    color: vm.colours[index2].colour
+                }
+            }, 700);
+        },
+        evaluateHit() {
+            if (!this.clicked) {
+                this.clicked = true;
+                if (this.currentColor === 0) {
+                    this.hitCounter++;
+                    switch (this.hitCounter) {
+                        case 5:
+                            this.gameMessage = this.hitCounter + " Treffer! Drei Schlücke verteilen oder weitermachen.";
+                            break;
+                        case 10:
+                            this.gameMessage = this.hitCounter + " Treffer! Fünf Schlücke verteilen oder weitermachen.";
+                            break;
+                        case 15:
+                            this.gameMessage = this.hitCounter + " Gewonnen! Zehn Schlücke verteilen!";
+                            this.hitCounter = 0;
+                            let vm = this;
+                            setTimeout(function () {
+                                vm.gameMessage = "Drück den Knopf, wenn der Text Blau ist."
+                            }, 1500);
+                            break;
+                        default:
+                            this.gameMessage = this.hitCounter + " Treffer!";
+                    }
 
-$(document).ready(function () {
-    delayedAlert();
-    $('.faq--title').addClass('collapsed');
+                } else {
+                    console.log(this.hitCounter);
+                    if (this.hitCounter < 5) {
+                        this.gameMessage = "Daneben. Trink einen Schluck!";
+                    } else if (this.hitCounter >= 5 && this.hitCounter < 10) {
+
+                        this.gameMessage = "Daneben. Trink zwei Schlücke!";
+                    } else if (this.hitCounter >= 10 && this.hitCounter < 15) {
+                        this.gameMessage = "Daneben. Trink fünf Schlücke!";
+                    }
+                    this.hitCounter = 0;
+
+
+                    let vm = this;
+                    setTimeout(function () {
+                        vm.gameMessage = "Drück den Knopf, wenn der Text Blau ist."
+                    }, 3000);
+                }
+            }
+        }
+    }, created() {
+        this.rotateColours();
+    },
+    template: '<div class="container-fluid"><div class="text-container"><div class="container__text" :style="currentStyle" @mousedown="evaluateHit()"><h2>{{ colourName }}</h2></div></div><p class="game-message">{{gameMessage}}</p></div>'
+})
+;
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue!',
+        gameStarted: false
+    }
 });
