@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-<div id="app">
+<div id="app" :style="{'background-color': backgroundColor}">
     <div class="jumbotron text-center">
         <h1 class="display-4">Das Project K Trinkspiel!</h1>
     </div>
     <player-select v-if="!gameStarted"></player-select>
-    <text-color-game></text-color-game>
+    <text-color-game @gameStopped="gameStopped($event)"></text-color-game>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.0.0.slim.min.js"></script>
